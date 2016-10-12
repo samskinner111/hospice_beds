@@ -1,0 +1,2 @@
+class Hospice < ApplicationRecord
+end

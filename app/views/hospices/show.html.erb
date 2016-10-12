@@ -1,0 +1,59 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @hospice.name %>
+</p>
+
+<p>
+  <strong>Address1:</strong>
+  <%= @hospice.address1 %>
+</p>
+
+<p>
+  <strong>Address2:</strong>
+  <%= @hospice.address2 %>
+</p>
+
+<p>
+  <strong>City:</strong>
+  <%= @hospice.city %>
+</p>
+
+<p>
+  <strong>State:</strong>
+  <%= @hospice.state %>
+</p>
+
+<p>
+  <strong>Zipcode:</strong>
+  <%= @hospice.zipcode %>
+</p>
+
+<p>
+  <strong>Main phone:</strong>
+  <%= @hospice.main_phone %>
+</p>
+
+<p>
+  <strong>Fax:</strong>
+  <%= @hospice.fax %>
+</p>
+
+<p>
+  <strong>Referral phone:</strong>
+  <%= @hospice.referral_phone %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @hospice.description %>
+</p>
+
+<p>
+  <strong>Bed owner:</strong>
+  <%= @hospice.bed_owner %>
+</p>
+
+<%= link_to 'Edit', edit_hospice_path(@hospice) %> |
+<%= link_to 'Back', hospices_path %>

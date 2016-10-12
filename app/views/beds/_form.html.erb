@@ -1,0 +1,47 @@
+<%= form_for(bed) do |f| %>
+  <% if bed.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(bed.errors.count, "error") %> prohibited this bed from being saved:</h2>
+
+      <ul>
+      <% bed.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :hospice_id %>
+    <%= f.number_field :hospice_id %>
+  </div>
+
+  <div class="field">
+    <%= f.label :status %>
+    <%= f.text_field :status %>
+  </div>
+
+  <div class="field">
+    <%= f.label :room_type %>
+    <%= f.text_field :room_type %>
+  </div>
+
+  <div class="field">
+    <%= f.label :bed_type %>
+    <%= f.text_field :bed_type %>
+  </div>
+
+  <div class="field">
+    <%= f.label :gender %>
+    <%= f.text_field :gender %>
+  </div>
+
+  <div class="field">
+    <%= f.label :desc %>
+    <%= f.text_field :desc %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

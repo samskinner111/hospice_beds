@@ -1,0 +1,2 @@
+json.extract! hospice, :id, :name, :address1, :address2, :city, :state, :zipcode, :main_phone, :fax, :referral_phone, :description, :bed_owner, :created_at, :updated_at
+json.url hospice_url(hospice, format: :json)

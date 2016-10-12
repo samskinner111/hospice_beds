@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  hospice_id: 1
+  status: MyString
+  room_type: MyString
+  bed_type: MyString
+  gender: MyString
+  desc: MyString
+
+two:
+  hospice_id: 1
+  status: MyString
+  room_type: MyString
+  bed_type: MyString
+  gender: MyString
+  desc: MyString

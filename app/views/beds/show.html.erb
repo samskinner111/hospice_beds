@@ -1,0 +1,34 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Hospice:</strong>
+  <%= @bed.hospice_id %>
+</p>
+
+<p>
+  <strong>Status:</strong>
+  <%= @bed.status %>
+</p>
+
+<p>
+  <strong>Room type:</strong>
+  <%= @bed.room_type %>
+</p>
+
+<p>
+  <strong>Bed type:</strong>
+  <%= @bed.bed_type %>
+</p>
+
+<p>
+  <strong>Gender:</strong>
+  <%= @bed.gender %>
+</p>
+
+<p>
+  <strong>Desc:</strong>
+  <%= @bed.desc %>
+</p>
+
+<%= link_to 'Edit', edit_bed_path(@bed) %> |
+<%= link_to 'Back', beds_path %>

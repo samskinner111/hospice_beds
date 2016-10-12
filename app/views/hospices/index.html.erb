@@ -1,0 +1,47 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Hospices</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Address1</th>
+      <th>Address2</th>
+      <th>City</th>
+      <th>State</th>
+      <th>Zipcode</th>
+      <th>Main phone</th>
+      <th>Fax</th>
+      <th>Referral phone</th>
+      <th>Description</th>
+      <th>Bed owner</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @hospices.each do |hospice| %>
+      <tr>
+        <td><%= hospice.name %></td>
+        <td><%= hospice.address1 %></td>
+        <td><%= hospice.address2 %></td>
+        <td><%= hospice.city %></td>
+        <td><%= hospice.state %></td>
+        <td><%= hospice.zipcode %></td>
+        <td><%= hospice.main_phone %></td>
+        <td><%= hospice.fax %></td>
+        <td><%= hospice.referral_phone %></td>
+        <td><%= hospice.description %></td>
+        <td><%= hospice.bed_owner %></td>
+        <td><%= link_to 'Show', hospice %></td>
+        <td><%= link_to 'Edit', edit_hospice_path(hospice) %></td>
+        <td><%= link_to 'Destroy', hospice, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Hospice', new_hospice_path %>
