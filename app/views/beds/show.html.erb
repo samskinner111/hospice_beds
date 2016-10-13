@@ -2,31 +2,31 @@
 
 <p>
   <strong>Hospice:</strong>
-  <%= @bed.hospice_id %>
+  <%= @bed.hospice.name %>
 </p>
 
 <p>
   <strong>Status:</strong>
-  <%= @bed.status %>
+  <%= @bed.status.capitalize %>
 </p>
 
 <p>
   <strong>Room type:</strong>
-  <%= @bed.room_type %>
+  <%= @bed.room_type.capitalize %>
 </p>
 
 <p>
   <strong>Bed type:</strong>
-  <%= @bed.bed_type %>
+  <%= @bed.bed_type.capitalize %>
 </p>
 
 <p>
   <strong>Gender:</strong>
-  <%= @bed.gender %>
+  <%= @bed.gender.capitalize %>
 </p>
 
 <p>
-  <strong>Desc:</strong>
+  <strong>Description:</strong>
   <%= @bed.desc %>
 </p>
 
