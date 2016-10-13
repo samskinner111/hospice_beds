@@ -2,7 +2,7 @@
 
 <h1>Beds</h1>
 
-<table>
+<table class='table table-hover'>
   <thead>
     <tr>
       <th>Hospice</th>
@@ -10,7 +10,7 @@
       <th>Room type</th>
       <th>Bed type</th>
       <th>Gender</th>
-      <th>Desc</th>
+      <th>Description</th>
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -18,11 +18,11 @@
   <tbody>
     <% @beds.each do |bed| %>
       <tr>
-        <td><%= bed.hospice_id %></td>
-        <td><%= bed.status %></td>
-        <td><%= bed.room_type %></td>
+        <td><%= bed.hospice.name %></td>
+        <td><%= bed.status.capitalize %></td>
+        <td><%= bed.room_type.capitalize %></td>
         <td><%= bed.bed_type %></td>
-        <td><%= bed.gender %></td>
+        <td><%= bed.gender.capitalize %></td>
         <td><%= bed.desc %></td>
         <td><%= link_to 'Show', bed %></td>
         <td><%= link_to 'Edit', edit_bed_path(bed) %></td>
@@ -34,4 +34,4 @@
 
 <br>
 
-<%= link_to 'New Bed', new_bed_path %>
+<%= link_to 'Add a Bed', new_bed_path, class: "btn btn-default"  %>
