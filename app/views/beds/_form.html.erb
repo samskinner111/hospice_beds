@@ -11,37 +11,38 @@
     </div>
   <% end %>
 
-  <div class="field">
-    <%= f.label :hospice_id %>
-    <%= f.number_field :hospice_id %>
+  <div class=" field form-group">
+    <%= f.label :hospice %>
+    <%= f.collection_select :hospice_id, Hospice.order(:name), :id, :name %>
   </div>
 
-  <div class="field">
+  <div class=" field form-group">
     <%= f.label :status %>
-    <%= f.text_field :status %>
+    <%= f.select :open, ['Open', 'Occupied'], :prompt => 'Select Status', class: "form-control" %>
   </div>
 
-  <div class="field">
+  <div class=" field form-group">
     <%= f.label :room_type %>
-    <%= f.text_field :room_type %>
+    <%= f.select :private, ['Private', 'Semi-Private'], :prompt => 'Select Privacy Type', class: "form-control" %>
   </div>
 
-  <div class="field">
+  <div class=" field form-group">
     <%= f.label :bed_type %>
-    <%= f.text_field :bed_type %>
+    <%= f.select :bed_type, ['Respite', 'In-Patient'], class: "form-control" %>
   </div>
 
-  <div class="field">
+  <div class=" field form-group">
     <%= f.label :gender %>
-    <%= f.text_field :gender %>
+    <%= f.select :gender, ['Male', 'Female'], :prompt => 'Select Gender', class: "form-control" %>
+  </div>
   </div>
 
-  <div class="field">
-    <%= f.label :desc %>
-    <%= f.text_field :desc %>
+  <div class=" field form-group">
+    <%= f.label :description %>
+    <%= f.text_field :desc, class: "form-control" %>
   </div>
 
   <div class="actions">
-    <%= f.submit %>
+    <%= f.submit class: "btn btn-primary"%>
   </div>
 <% end %>
