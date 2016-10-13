@@ -20,6 +20,10 @@ class HospicesController < ApplicationController
 
     respond_to do |format|
       if @hospice.save
+        # # every user needs to have a hospice. user creating hopice is the first admin
+        # current_user.hospice_id = @hospice.id
+        # current_user.admin = true
+        # current_user.save!
         format.html { redirect_to @hospice, notice: 'Hospice was successfully added.' }
         format.json { render :show, status: :created, location: @hospice }
       else
@@ -55,7 +59,6 @@ class HospicesController < ApplicationController
       @hospice = Hospice.find(params[:id])
     end
 
-    # Never trust parameters from the scary internet, only allow the white list through.
     def hospice_params
       params.require(:hospice).permit(:name, :address1, :address2, :city, :state, :zipcode, :main_phone, :fax, :referral_phone, :description, :bed_owner)
     end
