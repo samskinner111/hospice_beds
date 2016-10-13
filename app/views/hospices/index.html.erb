@@ -2,7 +2,7 @@
 
 <h1>Hospices</h1>
 
-<table>
+<table classs='table table-hover'>
   <thead>
     <tr>
       <th>Name</th>
@@ -15,7 +15,7 @@
       <th>Fax</th>
       <th>Referral phone</th>
       <th>Description</th>
-      <th>Bed owner</th>
+      <th>Bed owner?</th>
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -44,4 +44,4 @@
 
 <br>
 
-<%= link_to 'New Hospice', new_hospice_path %>
+<%= link_to 'Add a Hospice', new_hospice_path, class: "btn btn-default" %>
