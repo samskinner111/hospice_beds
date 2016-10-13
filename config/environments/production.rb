@@ -56,7 +56,8 @@ Rails.application.configure do
   # config.active_job.queue_adapter     = :resque
   # config.active_job.queue_name_prefix = "Hospice_Beds_#{Rails.env}"
   config.action_mailer.perform_caching = false
-
+  config.action_mailer.default_url_options = { host: '--actualhost--', port: 3000 }  #CHANGE PORT IN PRODUCTION
+  #****CHANGE PORT IN PRODUCTION****
   # Ignore bad email addresses and do not raise email delivery errors.
   # Set this to true and configure the email server for immediate delivery to raise delivery errors.
   # config.action_mailer.raise_delivery_errors = false
