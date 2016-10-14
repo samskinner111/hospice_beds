@@ -7,9 +7,6 @@ class PublicPagesController < ApplicationController
   end
 
   def home
-    puts "PARAMS"
-    puts params.inspect
-    @beds = Bed.all
   end
 
   def legal
