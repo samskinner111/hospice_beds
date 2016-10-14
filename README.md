@@ -16,7 +16,7 @@ All four use the same password: 'password'.
 
 At present, role does not matter but soon it will determine the parts of the app that are visible to users with different roles.  
 
-In the rails console, create a user for yourself with an 'app_admin' role.
+In the rails console, create a user for yourself with an 'app_admin' role.  This will be your main login.
 
 <!-- ### Database creation
 As a prerequisite it is assumed that you have a MySQL server setup on your development computer and are an administrative user.  You will have two databases on your local to run and test this project.  Both will be accessed by the `prokze_web` user.
