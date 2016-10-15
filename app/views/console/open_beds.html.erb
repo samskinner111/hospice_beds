@@ -1,7 +1,7 @@
 
-  <ol>
+  <ol class='openBed'>
     <% @open_beds.each do |bed| %>
-      <li class = 'openBed'>
+      <li>
         <%= bed.hospice.name %>
         <%= bed.room_type.capitalize %>
         <%= bed.bed_type %>
