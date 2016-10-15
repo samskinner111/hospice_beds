@@ -1,23 +1,14 @@
 <h1>Open Beds</h1>
 
-<table class='table table-hover'>
-  <thead>
-    <tr>
-      <th>Hospice</th>
-      <th>Room type</th>
-      <th>Bed type</th>
-      <th>Gender</th>
-    </tr>
-  </thead>
-
-  <tbody>
+<div class='panel-group'>
+  <ol>
     <% @open_beds.each do |bed| %>
-      <tr>
-        <td><%= bed.hospice.name %></td>
-        <td><%= bed.room_type.capitalize %></td>
-        <td><%= bed.bed_type %></td>
-        <td><%= bed.gender.capitalize %></td>
-      </tr>
+      <li class = 'openBed'>
+        <%= bed.hospice.name %>
+        <%= bed.room_type.capitalize %>
+        <%= bed.bed_type %>
+        <%= bed.gender.capitalize %>
+      </li>
     <% end %>
-  </tbody>
-</table>
+  </ol>
+</div>
