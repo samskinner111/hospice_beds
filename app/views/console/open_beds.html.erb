@@ -2,16 +2,18 @@
   <ol class='openBed'>
     <% @open_beds.each do |bed| %>
       <li>
-        <%= bed.hospice.name %>
+        <strong><%= bed.hospice.name %></strong>
 
         <%if bed.gender.capitalize == "Female"%>
           <i class="fa fa-venus"></i>
         <%else%>
           <i class="fa fa-mars"></i>
         <%end%>
-        
+
         <%= bed.room_type.capitalize %>
         <%= bed.bed_type %>
+        <button class="btn-success">RESERVE</button>
+        <i class="fa fa-arrow-circle-down">Info</i>
       </li>
     <% end %>
   </ol>
