@@ -4,12 +4,9 @@
   <thead>
     <tr>
       <th>Hospice</th>
-      <th>Status</th>
       <th>Room type</th>
       <th>Bed type</th>
       <th>Gender</th>
-      <th>Description</th>
-      <th colspan="3"></th>
     </tr>
   </thead>
 
@@ -17,14 +14,9 @@
     <% @open_beds.each do |bed| %>
       <tr>
         <td><%= bed.hospice.name %></td>
-        <td><%= bed.status.capitalize %></td>
         <td><%= bed.room_type.capitalize %></td>
         <td><%= bed.bed_type %></td>
         <td><%= bed.gender.capitalize %></td>
-        <td><%= bed.desc %></td>
-        <td><%= link_to 'Show', bed %></td>
-        <td><%= link_to 'Edit', edit_bed_path(bed) %></td>
-        <td><%= link_to 'Destroy', bed, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
   </tbody>
