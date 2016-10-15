@@ -29,11 +29,11 @@
       <ul class="nav navbar-nav navbar-right">
         <li><%= link_to "Unused Link", root_path%></li>
         <li><%= link_to 'Sign Up', user_session_path %></li>
-        <li><a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><%= @current_user == nil ? "Login" : "Logout" %> <span class="caret"></span></a></li>
-        <ul class="dropdown-menu">
+        <%if !user_signed_in? %>
           <li><%= link_to 'Login', open_beds_path %></li>
+        <%else%>
           <li><%= link_to('Logout', destroy_user_session_path, :method => :delete)%></li>
-        </ul>  
+        <%end%>
       </ul> <!-- line 29 -->
     </div><!-- /.navbar-collapse -->
   </div><!-- /.container-fluid -->
