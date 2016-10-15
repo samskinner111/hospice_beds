@@ -3,10 +3,15 @@
     <% @open_beds.each do |bed| %>
       <li>
         <%= bed.hospice.name %>
+
+        <%if bed.gender.capitalize == "Female"%>
+          <i class="fa fa-venus"></i>
+        <%else%>
+          <i class="fa fa-mars"></i>
+        <%end%>
+        
         <%= bed.room_type.capitalize %>
         <%= bed.bed_type %>
-        <%= bed.gender.capitalize %>
-        <i class="fa fa-venus"></i>
       </li>
     <% end %>
   </ol>
