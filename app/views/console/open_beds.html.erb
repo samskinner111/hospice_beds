@@ -19,7 +19,62 @@
         </div>
 
         <div id="collapse<%=bed.id%>" class="panel-collapse collapse out">
-          <div class="panel-body">Lorem ipsum dolor sit amet,</div>
+          <div class="panel-body">
+            <p>
+              <strong>Name:</strong>
+              <%= bed.hospice.name %>
+            </p>
+
+            <p>
+              <strong>Address1:</strong>
+              <%= bed.hospice.address1 %>
+            </p>
+
+            <p>
+              <strong>Address2:</strong>
+              <%= bed.hospice.address2 %>
+            </p>
+
+            <p>
+              <strong>City:</strong>
+              <%= bed.hospice.city %>
+            </p>
+
+            <p>
+              <strong>State:</strong>
+              <%= bed.hospice.state %>
+            </p>
+
+            <p>
+              <strong>Zipcode:</strong>
+              <%= bed.hospice.zipcode %>
+            </p>
+
+            <p>
+              <strong>Main phone:</strong>
+              <%= bed.hospice.main_phone %>
+            </p>
+
+            <p>
+              <strong>Fax:</strong>
+              <%= bed.hospice.fax %>
+            </p>
+
+            <p>
+              <strong>Referral phone:</strong>
+              <%= bed.hospice.referral_phone %>
+            </p>
+
+            <p>
+              <strong>Description:</strong>
+              <%= bed.hospice.description %>
+            </p>
+
+            <p>
+              <strong>Bed owner:</strong>
+              <%= bed.hospice.bed_owner %>
+            </p>
+          </div>
         </div>
       </li>
     <% end %>
