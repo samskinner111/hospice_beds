@@ -4,7 +4,7 @@
       <li>
         <div class="panel-heading">
           <strong><%= bed.hospice.name %></strong>
-
+          <br>
           <%if bed.gender.capitalize == "Female"%>
             <i class="fa fa-venus"></i>
           <%else%>
@@ -13,6 +13,7 @@
 
           <%= bed.room_type.capitalize %>
           <%= bed.bed_type %>
+          <br>
           <button class="btn-success">RESERVE</button>
           <a data-toggle="collapse" data-parent="#accordian" href="#collapse<%=bed.id%>">
             <i class="fa fa-arrow-circle-down">Info</i></a>
