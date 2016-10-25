@@ -31,6 +31,7 @@ In terminal, run:
 
 Finally, run 'rake db:setup' to create the schema and seed the databases.
 
+
 ### Users
 The preceeding creates and seeds the databases.  In particular, it creates four users with different roles:
   shaw0033@gmail.com, role: 'app_admin'
