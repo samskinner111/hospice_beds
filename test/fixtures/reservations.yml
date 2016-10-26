@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  bed_id: 1
+  user_id: 1
+  reserve_date: 2016-10-26
+  reopen_date: 2016-10-26
+
+two:
+  bed_id: 1
+  user_id: 1
+  reserve_date: 2016-10-26
+  reopen_date: 2016-10-26
