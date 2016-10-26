@@ -3,7 +3,7 @@
 
 hospices = Hospice.create([
   {name: 'Hospice Beds, Inc.', address1: '', address2: '', city: 'Atlanta', state: 'Georgia', zipcode: '', main_phone: '770-xxx-xxxx', fax: '', referral_phone: '', description: 'The company itself is the first hospice in the database. Id = 1.', bed_owner: false},
-  {name: 'Peachtree Chrisitian', address1: '132 Dayton Highway', address2: 'Suite 201', city: 'Atlanta', state: 'Georgia', zipcode: '30043', main_phone: '770-674-2109', fax: '770-126-2019', referral_phone: '678-213-2000', description: '42 bed hospice located in heart of Atlanta.', bed_owner: true}, 
+  {name: 'Peachtree Christian', address1: '132 Dayton Highway', address2: 'Suite 201', city: 'Atlanta', state: 'Georgia', zipcode: '30043', main_phone: '770-674-2109', fax: '770-126-2019', referral_phone: '678-213-2000', description: '42 bed hospice located in heart of Atlanta.', bed_owner: true}, 
   {name: 'MeSun Hospice', address1: '821 Springwell Rd', address2: '', city: 'Alpharetta', state: 'Georgia', zipcode: '30045', main_phone: '770-432-1200', fax: '770412-0921', referral_phone: '', description: 'We take care seriously, Hospice and Palliative care only.', bed_owner: true}, 
   {name: 'Harbor Grace', address1: '2809 Light Haven Way', address2: '', city: 'Roswell', state: 'Georgia', zipcode: '30017', main_phone: '678-321-1345', fax: '470-210-2177', referral_phone: '770-198-8874', description:"When care can't wait, we get the ball rolling.", bed_owner: true}, 
   {name:"Doctor's Hospice", address1: '1 Purple Hull Drive', address2: '', city: 'Snellville', state: 'Georgia', zipcode: '30043', main_phone: '678-195-82100', fax: '404-213-0009', referral_phone: '', description: 'Care is number one on our list. Patients and families feel at home.', bed_owner: true}])
