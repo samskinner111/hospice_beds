@@ -3,22 +3,24 @@
     <% @open_beds.each do |bed| %>
       <li>
         <div class="panel-heading">
-          <strong><%= bed.hospice.name %></strong>
+            <strong><%= bed.hospice.name %></strong> |
 
-          <%if bed.gender.capitalize == "Female"%>
-            <i class="fa fa-female"></i>
-          <%else%>
-            <i class="fa fa-male"></i>
-          <%end%>
+            <%if bed.gender.capitalize == "Female"%>
+              <i class="fa fa-female"></i> |
+            <%else%>
+              <i class="fa fa-male"></i> |
+            <%end%>
 
-          <%= bed.room_type.capitalize %>
-          <%= bed.bed_type %>
-          <button class="btn-success" id ="reserveBtn">RESERVE</button>
-        </div>
+            <%= bed.room_type.capitalize %> |
+            <%= bed.bed_type %>
+            <button class="btn-success" id ="reserveBtn">RESERVE</button>
 
-        <div class="footer">
-          <a data-toggle="collapse" data-parent="#accordian" href="#collapse<%=bed.id%>">
-            <i class="fa fa-arrow-circle-down">Info</i></a>
+            <hr>
+
+            <div class="footer">
+              <a data-toggle="collapse" data-parent="#accordian" href="#collapse<%=bed.id%>">
+                <i class="fa fa-arrow-circle-down"> More Inforfmation</i></a>
+            </div>
         </div>
 
         <div id="collapse<%=bed.id%>" class="panel-collapse collapse out">
