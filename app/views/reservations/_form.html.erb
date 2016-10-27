@@ -1,0 +1,39 @@
+
+<%= form_for(reservation) do |f| %>
+  <% if reservation.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(reservation.errors.count, "error") %> prohibited this reservation from being saved:</h2>
+
+      <ul>
+      <% reservation.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+  <!-- The first two field should be hidden fields using params. -->
+  <div class="field form-group">
+    <%= f.label :bed_id %>
+    <%= f.number_field :bed_id, class: "form-control" %>
+  </div>
+
+  <div class="field form-group">
+    <%= f.label :user_id %>
+    <%= f.number_field :user_id, class: "form-control" %>
+  </div>
+
+  <div class="field form-group">
+    <%= f.label :reserve_date %>
+    <%= f.date_select :reserve_date, class: "form-control" %>
+  </div>
+  <br>
+  <p>Complete this field only if you know the exact length of the patient's stay.  Otherwise leave blank.</p>
+  <div class="field form-group">
+    <%= f.label :reopen_date %>
+    <%= f.date_select :reopen_date, class: "form-control" %>
+  </div>
+  <br>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

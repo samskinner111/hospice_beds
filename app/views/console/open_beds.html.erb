@@ -6,9 +6,9 @@
           <strong><%= bed.hospice.name %></strong>
           <br>
           <%if bed.gender.capitalize == "Female"%>
-            <i class="fa fa-venus"></i>
+            <i class="fa fa-female"></i>
           <%else%>
-            <i class="fa fa-mars"></i>
+            <i class="fa fa-male"></i>
           <%end%>
 
           <%= bed.room_type.capitalize %>
@@ -69,11 +69,6 @@
             <p>
               <strong>Description:</strong>
               <%= bed.hospice.description %>
-            </p>
-
-            <p>
-              <strong>Bed owner:</strong>
-              <%= bed.hospice.bed_owner %>
             </p>
           </div>
         </div>
