@@ -1,0 +1,33 @@
+
+.loginForm {
+  border: 3px solid #99D0C7;
+  background-color: #EEFBF9;
+  width: 80%;
+  margin: 50px auto;
+  text-align: center;
+}
+
+input[type=submit] {
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: auto;
+}
+
+input[type=email], input[type=password] {
+    width: 70%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+}
+
+#loginBtn {
+  background-color: #CAECE6;
+  color: purple;
+  border: none;
+  border-radius: 20%;
+}
