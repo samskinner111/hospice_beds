@@ -13,14 +13,18 @@
 
             <%= bed.room_type.capitalize %> |
             <%= bed.bed_type %>
-            <button class="btn-success" id ="reserveBtn">RESERVE</button>
 
-            <hr>
-
-            <div class="footer">
+            <div class="row">
+              <div class="pull-left">
               <a data-toggle="collapse" data-parent="#accordian" href="#collapse<%=bed.id%>">
                 <i class="fa fa-arrow-circle-down"> More Inforfmation</i></a>
+              </div>
+              <div class="pull-right">
+                <button class="btn-success" id="reservationButton">RESERVE</button>
+              </div>
             </div>
+
+
         </div>
 
         <div id="collapse<%=bed.id%>" class="panel-collapse collapse out">
