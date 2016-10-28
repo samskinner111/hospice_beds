@@ -12,11 +12,11 @@
   <%= javascript_include_tag "https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" %>
   <%= csrf_meta_tags %>
 </head>
-<body class='container-fluid'>
-  <%= render 'layouts/navbar' %>
-
+<body>
+  <div class="container-fluid" id="main">
+    <%= render 'layouts/navbar' %>
     <%= yield %>
-
+  </div>
   <%= render 'layouts/footer' %>
 </body>
 <br>

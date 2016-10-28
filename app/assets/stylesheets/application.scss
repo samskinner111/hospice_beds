@@ -18,6 +18,16 @@
 @import "font-awesome-sprockets";
 @import "font-awesome";
 
+html, body {
+  height: 100%
+}
+
+#main {
+  overflow: auto;
+  min-height: 100%;
+  padding-bottom: 56px;
+}
+
 .pull-left {
   text-align: left;
 }
@@ -74,6 +84,7 @@ div.landingPage a:visited {
 
   padding: 1rem .5rem;
   width: 100%;
-  position: absolute;
-  bottom: 0;
+  position: relative;
+  height: 56px;
+  margin-top: -56px;
 }
