@@ -14,7 +14,7 @@
           <%= bed.room_type.capitalize %>
           <%= bed.bed_type %>
           <br>
-          <button class="btn-success">RESERVE</button>
+          <%= link_to 'RESERVE', new_reservation_path, id: 'button_font', class: "btn btn-success" %>
           <a data-toggle="collapse" data-parent="#accordian" href="#collapse<%=bed.id%>">
             <i class="fa fa-arrow-circle-down">Info</i></a>
         </div>
