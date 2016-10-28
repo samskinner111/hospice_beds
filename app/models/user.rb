@@ -4,4 +4,6 @@ class User < ApplicationRecord
   # :registerable,
   devise :database_authenticatable, 
          :recoverable, :rememberable, :trackable, :validatable
+
+  has_many :reservations       
 end

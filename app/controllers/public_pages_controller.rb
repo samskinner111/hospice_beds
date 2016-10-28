@@ -7,9 +7,9 @@ class PublicPagesController < ApplicationController
   end
 
   def home
-    if user_signed_in?
-      redirect_to open_beds_path
-    end 
+    # if user_signed_in?
+    #   redirect_to open_beds_path
+    # end 
   end
 
   def legal
