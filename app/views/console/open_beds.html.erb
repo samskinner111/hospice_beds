@@ -4,17 +4,6 @@
       <li>
         <div class="panel-heading">
 
-            <strong><%= bed.hospice.name %></strong> |
-
-            <%if bed.gender.capitalize == "Female"%>
-              <i class="fa fa-female"></i> |
-            <%else%>
-              <i class="fa fa-male"></i> |
-            <%end%>
-
-            <%= bed.room_type.capitalize %> |
-            <%= bed.bed_type %>
-
           <strong><%= bed.hospice.name %></strong>
           <br>
           <%if bed.gender.capitalize == "Female"%>
@@ -29,20 +18,6 @@
           <%= link_to 'RESERVE', new_reservation_path, id: 'button_font', class: "btn btn-success" %>
           <a data-toggle="collapse" data-parent="#accordian" href="#collapse<%=bed.id%>">
             <i class="fa fa-arrow-circle-down">Info</i></a>
-        </div>
-
-
-            <div class="row">
-              <div class="pull-left">
-              <a data-toggle="collapse" data-parent="#accordian" href="#collapse<%=bed.id%>">
-                <i class="fa fa-arrow-circle-down"> More Inforfmation</i></a>
-              </div>
-              <div class="pull-right">
-                <button class="btn-success" id="reservationButton">RESERVE</button>
-              </div>
-            </div>
-
-
         </div>
 
         <div id="collapse<%=bed.id%>" class="panel-collapse collapse out">
