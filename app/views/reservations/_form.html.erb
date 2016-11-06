@@ -12,10 +12,7 @@
     </div>
   <% end %>
   <!-- The first two field should be hidden fields using params. -->
-  <div class="field form-group">
-    <%= f.label :bed_id %>
-    <%= f.number_field :bed_id, class: "form-control" %>
-  </div>
+    <%= f.hidden_field :bed_id, value: @bed %>
 
   <div class="field form-group">
     <%= f.label :user_id %>

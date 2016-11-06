@@ -18,6 +18,16 @@
 @import "font-awesome-sprockets";
 @import "font-awesome";
 
+html, body {
+  height: 100%
+}
+
+#main {
+  overflow: auto;
+  min-height: 100%;
+  padding-bottom: 56px;
+}
+
 .pull-left {
   text-align: left;
 }
@@ -34,6 +44,14 @@
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+div.landingPage a:link {
+  color: purple;
+}
+
+div.landingPage a:visited {
+  color: purple;
 }
 
 .center {
@@ -66,4 +84,7 @@
 
   padding: 1rem .5rem;
   width: 100%;
+  position: relative;
+  height: 56px;
+  margin-top: -56px;
 }

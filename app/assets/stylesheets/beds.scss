@@ -2,6 +2,24 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+.hospiceBeds {
+  align: left;
+  padding-left: 0px;
+}
+.hospiceBeds-row {
+  list-style-position:inside;
+  border: 1px solid #A6A8AB;
+  margin: 15px 0px;
+  padding: 0px;
+  background-color: #93D2C6;
+  width: 100%;
+  font-size: 20px;
+}
+
+.hospiceBeds-row:nth-child(odd) {
+  background-color: #D1FFF6;
+}
+
 .openBed {
   align: left;
   padding-left: 0px;
@@ -9,7 +27,7 @@
 .openBed li {
   list-style-position:inside;
   border: 1px solid #A6A8AB;
-  padding: 10px;
+  padding: 0px;
   margin: 15px 0px;
   background-color: #93D2C6;
   width: 100%;
@@ -18,4 +36,17 @@
 
 .openBed li:nth-child(odd) {
   background-color: #D1FFF6;
+}
+
+.row {
+  padding:inherit;
+}
+
+.hospiceAddress {
+  text-align: center;
+}
+
+#button_font {
+  font: normal 15px arial, sans-serif;
+  color: white;
 }

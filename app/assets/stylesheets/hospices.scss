@@ -1,3 +1,37 @@
 // Place all the styles related to the Hospices controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+.hospices {
+  text-align: center;
+  align: left;
+  padding-left: 0px;
+}
+.hospices-row {
+  list-style-position:inside;
+  border: 1px solid #A6A8AB;
+  margin: 15px 0px;
+  padding: 0px;
+  background-color: #EEFBF9;
+  width: 100%;
+  font-size: 20px;
+}
+
+.hospices-row:nth-child(odd) {
+  background-color: #D1FFF6;
+}
+
+#toTop {
+  position: fixed;
+  right: 0px;
+  background: #A9004D;
+  padding: 5px 20px 5px 20px;
+  color: white;
+  border-radius: 15%;
+}
+
+#addHospice {
+  color: white;
+  display: table;
+  margin: 0 auto;
+}
