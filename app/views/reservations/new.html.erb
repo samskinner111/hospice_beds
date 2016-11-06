@@ -1,3 +1,4 @@
+<div class = "reservationForm">
 <h1>Pending Reservation</h1>
 <h4>Complete this form to temporarily reserve a bed.</h4>
 <h4>The bed will be held for one hour until the reservation is completed by phone or fax.</h4>
@@ -5,4 +6,5 @@
 
 <%= render 'form', reservation: @reservation %>
 
-<%= link_to 'Back', reservations_path %>
+<%= link_to 'Back', reservations_path, class: "btn btn-danger", id: "backBtn" %>
+</div>
