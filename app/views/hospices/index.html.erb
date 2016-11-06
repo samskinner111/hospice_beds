@@ -1,8 +1,10 @@
 <p id="notice"><%= notice %></p>
 
-<%= link_to 'Add Hospice', new_hospice_path, class: "btn btn-success", id:"addHospice" %>
+<%= link_to 'TOP', '#', id: 'toTop' %>
 
 <h1>Hospices</h1>
+
+<%= link_to 'Add Hospice', new_hospice_path, class: "btn btn-success", id: "addHospice" %>
 
 <div class="panel-group" id="accordian">
   <div class="hospices">
@@ -11,7 +13,7 @@
 
         <div class="panel-heading">
           <strong><%= hospice.name %></strong><br>
-          <%= button_to 'Edit', edit_hospice_path(hospice), class: 'btn btn-info' %>
+          <%= button_to 'Edit', edit_hospice_path(hospice), method: :get, class: 'btn btn-info' %>
           <%= button_to 'Remove', hospice, method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn btn-danger' %>
 
           <a data-toggle="collapse" data-parent="#accordian" href="#collapse<%=hospice.id%>">

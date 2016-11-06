@@ -21,7 +21,17 @@
   background-color: #D1FFF6;
 }
 
-#addHospice {
+#toTop {
   position: fixed;
   right: 0px;
+  background: #A9004D;
+  padding: 5px 20px 5px 20px;
+  color: white;
+  border-radius: 15%;
+}
+
+#addHospice {
+  color: white;
+  display: table;
+  margin: 0 auto;
 }
