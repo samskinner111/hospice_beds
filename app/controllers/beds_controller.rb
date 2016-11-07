@@ -17,7 +17,7 @@ class BedsController < ApplicationController
 
   def create
     @bed = Bed.new(bed_params)
-    @bed.hospice_id=current_user.hospice_id  #AP
+    @bed.hospice_id=current_user.hospice_id
 
     respond_to do |format|
       if @bed.save
