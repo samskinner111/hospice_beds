@@ -1,4 +1,3 @@
-
 <%= form_for(reservation) do |f| %>
   <% if reservation.errors.any? %>
     <div id="error_explanation">
@@ -11,13 +10,9 @@
       </ul>
     </div>
   <% end %>
-  <!-- The first two field should be hidden fields using params. -->
-    <%= f.hidden_field :bed_id, value: @bed %>
 
-  <div class="field form-group">
-    <%= f.label :user_id %>
-    <%= f.number_field :user_id, class: "form-control" %>
-  </div>
+  <%= f.hidden_field :bed_id, value: @bed %>
+  <%= f.hidden_field :user_di, value: current_user %>
 
   <div class="field form-group">
     <%= f.label :reserve_date %>

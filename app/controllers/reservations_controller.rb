@@ -9,6 +9,7 @@ class ReservationsController < ApplicationController
   end
 
   def new
+    @user = current_user
     @reservation = Reservation.new
     @bed = params[:bed_id]
   end
@@ -16,8 +17,9 @@ class ReservationsController < ApplicationController
   def edit
   end
 
-  def create
+  def create       
     @reservation = Reservation.new(reservation_params)
+    @reservation.user_id = current_user.id
 
     respond_to do |format|
       if @reservation.save
