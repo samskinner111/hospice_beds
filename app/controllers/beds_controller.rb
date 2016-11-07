@@ -10,7 +10,6 @@ class BedsController < ApplicationController
 
   def new
     @bed = Bed.new
-    @room_type = ["Respite","InPatient"] #AP
   end
 
   def edit

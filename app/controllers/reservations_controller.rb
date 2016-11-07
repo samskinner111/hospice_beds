@@ -9,7 +9,6 @@ class ReservationsController < ApplicationController
   end
 
   def new
-    @user = current_user
     @reservation = Reservation.new
     @bed = params[:bed_id]
   end
