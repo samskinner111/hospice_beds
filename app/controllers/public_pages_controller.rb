@@ -1,4 +1,6 @@
 class PublicPagesController < ApplicationController
+  public_pages = [:about, :contact_us, :home, :legal, :privacy_policy]
+  before_action :authenticate_user!, :except => public_pages
 
   def about
   end
@@ -7,9 +9,6 @@ class PublicPagesController < ApplicationController
   end
 
   def home
-    # if user_signed_in?
-    #   redirect_to open_beds_path
-    # end 
   end
 
   def legal

@@ -16,8 +16,9 @@ class ReservationsController < ApplicationController
   def edit
   end
 
-  def create
+  def create       
     @reservation = Reservation.new(reservation_params)
+    @reservation.user_id = current_user.id
 
     respond_to do |format|
       if @reservation.save

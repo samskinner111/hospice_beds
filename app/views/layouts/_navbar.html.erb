@@ -10,7 +10,6 @@
       </button>
       <%= image_tag 'HB.png', title: 'HB', id:'brand' %>
     </div>
-
     <!-- Collect the nav links, forms, and other content for toggling -->
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav">
@@ -27,14 +26,9 @@
         <button type="submit" class="btn btn-default">Submit</button>
       </form>
       <ul class="nav navbar-nav navbar-right">
-        <li><%= link_to "Unused Link", root_path%></li>
-        <li><%= link_to 'Sign Up', user_session_path %></li>
-        <%if !user_signed_in? %>
-          <li><%= link_to 'Login', open_beds_path %></li>
-        <%else%>
-          <li><%= link_to('Logout', destroy_user_session_path(current_user), :method => :delete)%></li>
-        <%end%>
-      </ul> <!-- line 29 -->
+        <li><%= link_to 'Sign Up', new_user_registration_path %></li>
+        <li><%= link_to('Logout', destroy_user_session_path(current_user), :method => :delete)%></li>
+      </ul> <!-- line 28 -->
     </div><!-- /.navbar-collapse -->
   </div><!-- /.container-fluid -->
 </nav>
