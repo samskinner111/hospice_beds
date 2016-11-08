@@ -1,30 +1,28 @@
-<p id="notice"><%= notice %></p>
-
 <h2>Your Open Reservations</h2>
 
 <div class="panel-group">
+    <div class='reservationBed'>
+    <% @reservations.each do |reservation| %>
+      <div class = "reservationBeds-row">
+        <%= reservation.bed.hospice.name %>
+        <br>
+        <%if reservation.bed.gender.capitalize == "Female"%>
+            <i class="fa fa-female"></i>
+        <%else%>
+            <i class="fa fa-male"></i>
+        <%end%>
 
-<div class='reservationBed'>
-  <% @reservations.each do |reservation| %>
-  <div class = "reservationBeds-row">
-    <%= reservation.bed.hospice.name %>
-    <br>
-    <%if reservation.bed.gender.capitalize == "Female"%>
-        <i class="fa fa-female"></i>
-    <%else%>
-        <i class="fa fa-male"></i>
-    <%end%>
+        <%= reservation.bed.room_type %>
+        <%= reservation.bed.bed_type %>
+        <%= reservation.reserve_date %>
+        <% if reservation.reopen_date? %>
+          to <%= reservation.reopen_date %>
+        <%end%>
 
-    <%= reservation.bed.room_type %>
-    <%= reservation.bed.bed_type %>
-    <%= reservation.reserve_date %>
-    <% if reservation.reopen_date? %>
-      to <%= reservation.reopen_date %>
-    <%end%>
-
-    <%= link_to 'Edit', edit_reservation_path(reservation) %>
-    <%= link_to 'Cancel', reservation, method: :delete, data: { confirm: 'Are you sure?' } %>
-  </div>
-  <% end %>
+        <%= link_to 'Edit', edit_reservation_path(reservation) %>
+        <%= link_to 'Cancel', reservation, method: :delete, data: { confirm: 'Are you sure?' } %>
+      </div>
+    <% end %>
+    </div>
 </div>
-</div>
+<%= link_to 'View Open Beds', open_beds_path %>
