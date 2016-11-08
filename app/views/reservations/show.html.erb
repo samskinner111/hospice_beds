@@ -1,24 +1,45 @@
-<p id="notice"><%= notice %></p>
-
-<p>
-  <strong>Bed:</strong>
-  <%= @reservation.bed_id %>
-</p>
-
-<p>
-  <strong>User:</strong>
-  <%= @reservation.user.last_name %>
-</p>
-
-<p>
-  <strong>Reserve date:</strong>
-  <%= @reservation.reserve_date %>
-</p>
-
-<p>
-  <strong>Reopen date:</strong>
-  <%= @reservation.reopen_date %>
-</p>
-
-<%= link_to 'Edit', edit_reservation_path(@reservation) %> |
-<%= link_to 'Back', reservations_path %>
+<br>
+<h2>Complete Your Reservation in One Hour</h2>
+<h4>Reservations not completed and verified by the hospice within an hour are canceled automatically.</h4>
+<br>
+<div class='container'>
+  <h4><div class='pull-left'>
+    <%= @reservation.bed.hospice.name%><br>
+    <%= @reservation.bed.hospice.address1%><br>
+    <%= @reservation.bed.hospice.address2 %><br>
+    <%= @reservation.bed.hospice.city %>, 
+    <%= @reservation.bed.hospice.state %>&nbsp;
+    <%= @reservation.bed.hospice.zipcode %>
+  </div>
+  <div class='center'>
+    Main Phone: <%= @reservation.bed.hospice.main_phone%><br>
+    Fax: <%= @reservation.bed.hospice.fax%><br>
+    Referral Phone: <%= @reservation.bed.hospice.referral_phone%>
+  </div>
+  <br><br>
+  <div>
+    <strong>Bed:</strong>
+    <%= @reservation.bed.desc %>
+  </div>
+  <br>
+  <div>
+    <strong>Reserve date:</strong>
+    <%= @reservation.reserve_date %>
+  </div>
+  <div>
+    <strong>Reopen date:</strong>
+    <%= @reservation.reopen_date %>
+  </div></h4>
+  <br>
+  <div>
+    <div class='pull-left'>
+      <%= link_to 'Cancel Reservation', reservation_path(@reservation), method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn btn' %>
+    </div>
+    <div class='pull-left'>
+      <%= link_to 'Edit Dates', edit_reservation_path(@reservation), class: 'btn btn' %>
+    </div>
+    <div class='pull-left'>  
+      <%= link_to 'View Your Reservations', reservations_path, class: 'btn btn' %>
+    </div>  
+  </div>
+</div>
